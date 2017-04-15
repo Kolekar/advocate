@@ -1,14 +1,22 @@
 Myapp::Application.routes.draw do
+ 
+
+ 
   get "home/index"
   get "home/minor"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-root to: 'home#index'
+
+devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", passwords: "users/passwords"}
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
+namespace :user do
+  root to: 'dashboard#index'
+  resources :cases
+end
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
