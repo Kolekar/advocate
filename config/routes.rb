@@ -9,11 +9,9 @@ Myapp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", passwords: "users/passwords"}
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+devise_for :users
 
-namespace :user do
+namespace :lawyer do
   root to: 'dashboard#index'
   resources :cases
 end

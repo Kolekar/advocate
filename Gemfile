@@ -32,6 +32,7 @@ group :doc do
 end
 gem 'devise'
 gem 'annotate'
+gem 'jquery-rails', "~> 2.3.0"
 gem 'rubocop', require: false
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
