@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSPINIA</title>
+
+    <!-- Main css styles -->
+    <%= stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track' => true  %>
+ <!-- Main css styles -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <!-- Main javascript files -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    
+    <%= csrf_meta_tags %>
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div >
+
+                <h1 class="logo-name"><!-- IN+ --> 
+                    <img alt="image" style="width:250px;" src="/img/advocate-symbol.png"/>
+                </h1>
+            </div>
+            <h3>Welcome to Lawyer</h3>
+
+   
+            <%= yield %>
+
+
+ <p class="m-t"> <small>Lawyer &copy; 2017</small> </p>
+        </div>
+    </div>
+<%= javascript_include_tag 'pages', 'data-turbolinks-track' => true %>
+   
+
+</body>
+</html>
