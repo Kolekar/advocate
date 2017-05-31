@@ -5,8 +5,7 @@
 #  id                    :integer          not null, primary key
 #  user_id               :integer
 #  status_id             :integer
-#  state_id              :integer
-#  district_id           :integer
+#  cnr_no                :string
 #  cort_id               :integer
 #  case_type_id          :integer
 #  case_no               :string

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170414160125) do
+ActiveRecord::Schema.define(version: 20170520080151) do
 
   create_table "case_clients", force: :cascade do |t|
     t.integer  "client_id"
@@ -29,8 +29,7 @@ ActiveRecord::Schema.define(version: 20170414160125) do
   create_table "cases", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "status_id"
-    t.integer  "state_id"
-    t.integer  "district_id"
+    t.string   "cnr_no"
     t.integer  "cort_id"
     t.integer  "case_type_id"
     t.string   "case_no"
@@ -58,9 +57,18 @@ ActiveRecord::Schema.define(version: 20170414160125) do
     t.datetime "updated_at"
   end
 
-  create_table "courts", force: :cascade do |t|
-    t.integer  "district_id"
+  create_table "court_complexes", force: :cascade do |t|
     t.string   "name"
+    t.string   "court_complex_id"
+    t.integer  "district_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "courts", force: :cascade do |t|
+    t.integer  "court_complex_id"
+    t.string   "name"
+    t.string   "court_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -68,6 +76,7 @@ ActiveRecord::Schema.define(version: 20170414160125) do
   create_table "districts", force: :cascade do |t|
     t.string   "name"
     t.integer  "state_id"
+    t.string   "district_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -98,6 +107,7 @@ ActiveRecord::Schema.define(version: 20170414160125) do
 
   create_table "states", force: :cascade do |t|
     t.string   "name"
+    t.string   "state_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

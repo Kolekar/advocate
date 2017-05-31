@@ -2,11 +2,12 @@
 #
 # Table name: courts
 #
-#  id          :integer          not null, primary key
-#  district_id :integer
-#  name        :string
-#  created_at  :datetime
-#  updated_at  :datetime
+#  id               :integer          not null, primary key
+#  court_complex_id :integer
+#  name             :string
+#  court_id         :string
+#  created_at       :datetime
+#  updated_at       :datetime
 #
 
 # This includes Indian Courts

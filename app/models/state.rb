@@ -4,6 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  name       :string
+#  state_id   :string
 #  created_at :datetime
 #  updated_at :datetime
 #

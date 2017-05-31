@@ -2,11 +2,12 @@
 #
 # Table name: districts
 #
-#  id         :integer          not null, primary key
-#  name       :string
-#  state_id   :integer
-#  created_at :datetime
-#  updated_at :datetime
+#  id          :integer          not null, primary key
+#  name        :string
+#  state_id    :integer
+#  district_id :string
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 # This includes all disrict states

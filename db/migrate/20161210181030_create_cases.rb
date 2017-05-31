@@ -3,8 +3,7 @@ class CreateCases < ActiveRecord::Migration
     create_table :cases do |t|
       t.integer :user_id
       t.integer :status_id
-      t.integer :state_id
-      t.integer :district_id
+      t.string :cnr_no
       t.integer :cort_id
       t.integer :case_type_id
       t.string :case_no
