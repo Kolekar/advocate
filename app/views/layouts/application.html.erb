@@ -6,6 +6,7 @@
     <title>INSPINIA</title>
 
     <!-- Main css styles -->
+    <%= stylesheet_link_tag @view_assets if @view_assets %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
     <!-- Main javascript files -->
@@ -38,6 +39,7 @@
 
     </div>
     <!-- End wrapper-->
-
+    <%= javascript_include_tag @view_assets if @view_assets %>
+<%= yield :javascript %>
 </body>
 </html>

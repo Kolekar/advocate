@@ -3,6 +3,7 @@ class Lawyer::CasesController < Lawyer::LawyerController
   end
 
   def new
+    @view_assets = "forms"
   end
 
   def show
